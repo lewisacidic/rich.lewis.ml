@@ -1,0 +1,187 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,400italic');
+
+body {
+	background:
+	-webkit-linear-gradient(45deg, hsla(199, 46%, 68%, 1) 0%, hsla(199, 46%, 68%, 0) 70%),
+	-webkit-linear-gradient(315deg, hsla(202, 34%, 50%, 1) 10%, hsla(202, 34%, 50%, 0) 80%),
+	-webkit-linear-gradient(225deg, hsla(71, 60%, 42%, 1) 10%, hsla(71, 60%, 42%, 0) 80%),
+	-webkit-linear-gradient(135deg, hsla(140, 86%, 35%, 1) 100%, hsla(140, 86%, 35%, 0) 70%);
+	background:
+	linear-gradient(45deg, hsla(199, 46%, 68%, 1) 0%, hsla(199, 46%, 68%, 0) 70%),
+	linear-gradient(135deg, hsla(202, 34%, 50%, 1) 10%, hsla(202, 34%, 50%, 0) 80%),
+	linear-gradient(225deg, hsla(71, 60%, 42%, 1) 10%, hsla(71, 60%, 42%, 0) 80%),
+	linear-gradient(315deg, hsla(140, 86%, 35%, 1) 100%, hsla(140, 86%, 35%, 0) 70%);
+	background-attachment: fixed;
+}
+
+/* Space out content a bit */
+body, h1, h2, h3, p {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* configure tooltip */
+.tooltip {
+	font-weight: 200;
+}
+
+.tooltip > .nub {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  margin-left: -5px;
+  border: solid 5px;
+  border-color: transparent transparent #333333 transparent;
+  top: -10px;
+}
+
+/*configure navbar */
+
+nav {
+	display: flex; 
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 1.75em 0em 0.5em 0em;
+	width: 85%;
+	max-width: 550px;
+	font-color: #FFF;
+	font-size: 200%;
+}
+
+.nav-icon {
+	font-size: 1.2em;
+	padding: auto;
+	display: inline;
+	position: relative;
+	opacity: 0.3;
+	color: white;
+
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	-o-transition: opacity .25s ease-in-out;
+	-ms-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;
+}
+
+.nav-icon:hover {
+	color: white;
+	opacity: 1.0;
+}
+
+.nav-icon::after {
+	position: absolute;
+  	top: 100%;
+  	left: 50%;
+  	content: "";
+  	margin-left: -0.25em;
+  	width: 0; height: 0;
+  	border: 0.25em solid;
+  	border-color: transparent transparent #FFFFFF transparent;
+  	visibility: hidden;
+  	opacity: 0;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	-o-transition: opacity .25s ease-in-out;
+	-ms-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;
+  }
+
+.nav-icon.selected {
+	opacity: 1.0;
+}
+
+.nav-icon.selected::after {
+	visibility: visible;
+	opacity: 1.0;
+
+}
+
+#page-wrapper {
+	width:90%;
+	max-width: 960px;
+	margin: 0 auto;
+
+}
+
+.main-section {
+	position: relative;
+	background: #FFF;
+
+}
+
+.view {
+
+	padding: 5% 7.5% 5% 7.5%;
+	background: #FFF;
+
+}
+
+.main-section p {
+	color: #888;
+	font-weight:300;
+}
+.centered {
+	text-align: center;
+}
+
+input[type=text], input[type=email], textarea {
+
+	font-size: 14pt;
+	font-weight: 200;
+	line-height: 1.35em;
+	border: 0;
+	background: #F4F4F4;
+	color: #777777;
+	padding: 0.75em;
+	width: 100%;
+	box-shadow: none;
+	box-sizing: border-box;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-appearance: none;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	transition: background-color .25s ease-in-out;
+}
+ 
+input[type=text]:focus, input[type=email]:focus textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+button {
+	margin: 0 0 0 0em;
+}
+
+textarea {
+	overflow: auto;
+}
+
+
+.footer {
+	padding: 0.5em 0 0 0;
+}
+
+.footer p {
+	color: rgba(255,255,255,0.45);
+	font-weight: 200;
+	line-height: 1.75;
+}
+
+
+@media (max-width: 40.063em) {
+	nav {
+		padding: 0.5em 0em 0.3em 0em;
+	}
+
+  .nav-icon {
+  	font-size: 0.7em;
+  }
+
+  .tooltip {
+  	visibility: hidden;
+  }
+}

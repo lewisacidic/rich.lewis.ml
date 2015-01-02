@@ -1,0 +1,5 @@
+<nav>
+    <a ng-repeat="page in pages" class="nav-icon" ng-class="{ 'selected': page.isSelected }" ng-href="{{page.url}}" tooltip="{{page.name}}">
+  	  <fa name="{{page.icon}}" fw></fa>
+  	</a>
+</nav>
